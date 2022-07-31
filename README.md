@@ -1,27 +1,23 @@
 # ArgentinaPrograma
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+Portfolio web para Argentina Programa.
 
-## Development server
+## Tecnologías aplicadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+HTML, CSS, TypeScript, JavaScript.
+Framework: Angular.
+Base de datos (NoSql): Firebase.
+Link deploy del proyecto: 
 
-## Code scaffolding
+##
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Realicé la base de datos, autenticación (login) y protección de rutas con Firebase. Las peticiones a la base de datos en firebase se encuentran en los servicios (CRUD, Auth, AuthGuard). Es decir hay que loguearse, si es correcto el email, se puede acceder a la edición del portfolio. Se puede agregar habilidades, algo que pude lograr es permitir subir imágenes a la base de datos (formato64) para mostrarlas y poder ponerle un "icono" a las habilidades. También borrar y editar.
+Hice lo que mas pude para que sea responsive. Quizás hay varios detalles pero quedó legible, por lo menos visto desde mi celular, notebook (aportada por el programa) y pc.
 
-## Build
+## Personal
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+No utilicé MySql. Tampoco bootstrap.
+Decidí no utilizar bootstrap porque queria aprender mas sobre CSS. Considero que me fue mas beneficioso pero hay algunos problemas que bootstrap si me hubiese podido solucionar como el de los modales. Si bien pude lograrlo con CSS despues tenia unos problemas con los componentes y decidí hacer el ruteo y listo (por ejemplo cuando se agregan/editan nuevas habilidades, experiencias, proyectos).
+Encontré muchos errores trabajando con MySql, si bien le di unos intentos no pude continuar y decidí pasarme a Firebase (NoSql).
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+El proyecto resultó ser bastante frustrante porque no tenia conocimientos previos en programación, pero pude sobrellevar la frustración y lograr un buen resultado. Aún no estoy conforme porque sé que hay varias cosas que cambiar, mucho código repetido y componentes que quizás podrían ser solo uno. Tambíen los servicios, siento que los aproveché pero no del todo. Igualmente es increíble la cantidad de cosas que aprendí.
