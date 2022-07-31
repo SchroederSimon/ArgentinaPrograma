@@ -13,6 +13,7 @@ Link deploy del proyecto: https://argentinaprograma-3231d.web.app/#/portfolio
 
 Realicé la base de datos, autenticación (login) y protección de rutas con Firebase. Las peticiones a la base de datos en firebase se encuentran en los servicios (CRUD, Auth, AuthGuard). Es decir hay que loguearse, si es correcto el email, se puede acceder a la edición del portfolio. Se puede agregar habilidades, algo que pude lograr es permitir subir imágenes a la base de datos (formato64) para mostrarlas y poder ponerle un "icono" a las habilidades. También borrar y editar.
 Hice lo que mas pude para que sea responsive. Quizás hay varios detalles pero quedó legible, por lo menos visto desde mi celular, notebook (aportada por el programa) y pc.
+También el formulario de contacto funciona y pueden enviarme mails.(emailjs)
 
 ## Personal
 
