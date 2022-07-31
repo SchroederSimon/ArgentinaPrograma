@@ -1,0 +1,38 @@
+<!-- Modal -->
+<div class="kontainer">
+    <div class="contactContainer">
+        <form [formGroup]="skillz" (ngSubmit)="agregarEditarSkill()">
+            <button class="botonCerrarModal" routerLink="/portfolio" fragment="skill">X</button>
+            <div class="contactMeTitle">
+                <h1> {{ titulo }}        
+                    <div *ngIf="loading" class="container">
+                    <div class="loading"></div>
+              </div></h1>
+            </div>
+            <div class="advertencia-box" *ngIf="submitted && skillz.invalid">
+                <span class="advertencia">Todos los campos son obligatorios</span>
+            </div>
+            <div class="inputs">
+                <input type="text" id="name" required formControlName="nombre">
+                <label for="name"> Skill</label>
+            </div>
+            <div class="inputs">
+                <input type="text" id="name" required formControlName="level">
+                <label for="name"> Nivel</label>
+            </div>
+            <div class="inputs">
+                <label for="upload" class="upload-boton">
+                    <img src="assets/imagenes/upload-solid.svg" alt="">
+                    <span>Elegir imagen</span>
+                </label>
+                <input (change)="cargarImagen($event)" type="file" name="upload" id="upload" accept="image/*" required formControlName="imageUrl">
+            </div>
+            <div class="preCarga">
+                <img class="preImg" [src]="imagenes[0]">
+            </div>
+            <div class="boton">
+                <button  type="submit">{{boton}} <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </div>
+</div>

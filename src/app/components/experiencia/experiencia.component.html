@@ -1,0 +1,26 @@
+<div class="containerModal">
+    <div>
+        <h1>Experiencias</h1>
+    </div>
+        <button class="botonModal" routerLink="/agregarExperiencia" *ngIf="(afAuth.user | async)">Agregar experiencia</button>
+</div>
+<div class="container">
+    <div class="timeline">
+        <ul>
+            <li *ngFor="let experiencia of experiencias; 
+            let oddElement = odd;
+            let evenElement= even"
+             [ngClass]="{'odd': oddElement, 'even':evenElement}">
+                <div class="timeline-content">
+                    <h2 class="date">{{ experiencia.fecha }}</h2>
+                    <h1>{{ experiencia.titulo }}</h1>
+                    <p>{{ experiencia.descripcion }}</p>
+                </div>
+                <div *ngIf="(afAuth.user | async)">
+                    <button [routerLink]="['/editExperiencia', experiencia.id]" class="botones"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+                    <button (click)="eliminarExperiencia(experiencia.id)" class="botones"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+                </div>
+            </li>        
+        </ul>
+    </div>
+</div>

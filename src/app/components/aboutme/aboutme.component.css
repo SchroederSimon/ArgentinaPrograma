@@ -1,0 +1,38 @@
+.aboutMe {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 80px 50px 50px 50px;
+    margin-bottom: 150px;
+}
+
+.aboutCol {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.aboutCol h1 {
+    font-weight: 800;
+    font-size: 2em;
+    padding: 0 0 20px 0;
+}
+
+
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 700px){
+    .aboutMe {
+        width: 100%;
+    }
+    img{
+        display: none;
+    }
+    .aboutCol{
+        flex-basis: auto;
+    }
+}

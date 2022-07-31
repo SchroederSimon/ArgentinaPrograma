@@ -1,0 +1,19 @@
+<div class="container">
+<div class="skills">
+    <div class="titleSkills">
+        <h1>Skills</h1>
+        <button *ngIf="(afAuth.user | async)" class="botonModal" routerLink="/agregarSkill">Agregar skill</button>
+    </div>
+    <div class="image" *ngFor="let skill of skills">
+            <img class="icons" src="{{skill.imageUrl}}" alt="HTML">
+        <div class="imageOverlay imageOverlay--primary">
+            <div class="imageTitle">{{skill.nombre}}  
+            </div>
+            <p class="imageDescription">
+                {{skill.level}}
+            </p>
+            <button [routerLink]="['/editSkill', skill.id]" *ngIf="(afAuth.user | async)"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+            <button (click)="eliminarSkill(skill.id)" *ngIf="(afAuth.user | async)"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+    </div>
+</div>

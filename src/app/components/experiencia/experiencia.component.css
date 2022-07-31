@@ -1,0 +1,142 @@
+.container{
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.botonModal{
+    position: absolute;
+    margin-top: 150px;
+    background-color: black;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+}
+.botones {
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 25%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+.date{
+    color: black;
+}
+.title{
+    font-size: 3em;
+    padding: 60px;
+    margin-bottom: 1100px;
+}
+
+.timeline li {
+    list-style-type: none;
+}
+
+.timeline ul li {
+    padding: 20px;
+    background-color: #264653;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    word-wrap:break-word;
+}
+
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-content h1{
+    margin-bottom: 10px;
+}
+.timeline-content p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.timeline::before{
+        content:'';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: gray;
+}
+.timeline ul li {
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+
+}
+.timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+}
+.timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+}
+.timeline ul li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+}
+.timeline ul li:nth-child(odd)::after{
+        transform: translate(50%, -50%);
+        right: -30px;
+}
+.timeline ul li:nth-child(even)::after{
+        transform: translate(-50%, -50%);
+        left: -30px;
+}
+
+.timeline-content .date {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: -30px;
+}
+
+/*Hover*/
+
+.timeline ul li:hover:after {
+    background-color: #e76f51;
+}
+@media(max-width: 999px){
+    button{
+      display: none;
+    }  
+  }

@@ -1,0 +1,22 @@
+<div class="contactContainer">
+    <form [formGroup]="contact" (ngSubmit)="sendEmail($event); this.contact.reset();">
+        <div class="contactMeTitle">
+            <h1>Contacto</h1>
+        </div>
+        <div class="inputs">
+            <input type="text" id="name" required name="name" formControlName="name" >
+            <label for="name"><i class="fa-solid fa-user"></i> Nombre</label>
+        </div>
+        <div class="inputs">
+            <input type="text" id="email2" required name="email" formControlName="email">
+            <label for="email"><i class="fa-solid fa-at"></i> Email</label>
+        </div>
+
+        <div class="inputs">
+            <textarea name="message" id="message" rows="8" required name="message" formControlName="message"></textarea>
+            <label for="message"><i class="fa-solid fa-message"></i> Mensaje</label>
+        </div>
+        <button type="submit" id="button" value="Send">Send<i class="fa-solid fa-paper-plane"></i></button>
+        <p id="my-form-status"></p>
+    </form>
+</div>

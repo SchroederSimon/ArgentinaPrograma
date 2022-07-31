@@ -1,0 +1,24 @@
+<div class="projects">
+    <div class="projectsTitle">
+        <h1>Proyectos</h1>
+        <button *ngIf="(afAuth.user | async)" class="botonModal" routerLink="/agregarProyecto">Agregar proyecto</button>
+    </div>
+    <div class="posicion">
+        <div class="row" *ngFor="let project of projects; 
+        let oddElement = odd;
+        let evenElement= even"
+         [ngClass]="{'odd': oddElement, 'even':evenElement}">
+            <div class="projectInfo">
+                <h2>{{project.proyecto}} </h2>
+                <p>{{project.descripcion}}</p>
+                <div class="centerImg">
+                <a href= {{project.urlProyecto}} target="_blank">
+                    <img class="imgProject" src="{{project.imageUrl}}" alt="Pagina peliculas">
+                </a> 
+                </div>
+                <button [routerLink]="['/editarProyecto', project.id]" *ngIf="(afAuth.user | async)" ><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+                <button (click)="eliminarProyecto(project.id)" *ngIf="(afAuth.user | async)"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

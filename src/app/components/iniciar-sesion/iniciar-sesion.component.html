@@ -1,0 +1,19 @@
+<div class="todo">
+    <div class="inicioContainer">
+        <form  (ngSubmit)="login()" [formGroup]="loginUsuario">
+            <div class="inicioTitle">
+                <h1>Login</h1>
+            </div>
+            <div class="inputs">
+                <input type="email" formControlName="email" >
+                <label for="email"><i class="fa-solid fa-at"></i>Email</label>
+            </div>
+    
+            <div class="inputs">
+                <input type="password" id="password" formControlName="password">
+                <label for="password"><i class="fa-solid fa-at"></i>Contraseña</label>
+            </div>
+            <button type="submit">Loguearse   <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+        </form>
+    </div>
+    </div>

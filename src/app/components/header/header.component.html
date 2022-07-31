@@ -1,0 +1,20 @@
+<div class="backgroundProfile">
+    <nav>
+        <h2 class="logo"><a href="https://argentinaprograma.inti.gob.ar/" target="_blank">Argentina Programa</a></h2>
+            <ul class="menu" [class.menuClasse]="menuVariable">
+                <li><a routerLink="/portfolio" fragment="home">INICIO</a></li>
+                <li><a routerLink="/portfolio" fragment="PROYECTOS">PROYECTOS</a></li>
+                <li><a routerLink="/portfolio" fragment="skill">SKILLS</a></li>
+                <li><a routerLink="/portfolio" fragment="SOBREMI">SOBRE MÍ</a></li>
+                <li><a routerLink="/portfolio" fragment="CONTACTO">CONTACTO</a></li>
+            </ul>
+            <div class="menu_icon" [class.menu_iconClass]="menu_icon_variable" (click)="openMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button *ngIf="!(afAuth.user | async)" type="button" routerLink="/login">Login</button>
+            <button *ngIf="(afAuth.user | async)" (click)="logOut()" type="button">Log out</button>  
+        </nav>
+</div>
+

@@ -1,0 +1,32 @@
+<!-- Modal -->
+<div class="kontainer">
+    <div class="contactContainer">
+        <form [formGroup]="experiencia" (ngSubmit)="agregarEditarExperiencia()">
+            <button class="botonCerrarModal" routerLink="/portfolio" fragment="experiencias">X</button>
+            <div class="contactMeTitle">
+                <h1> {{ header }}        
+                    <div *ngIf="loading" class="container">
+                    <div class="loading"></div>
+              </div></h1>
+            </div>
+            <div class="advertencia-box" *ngIf="submitted && experiencia.invalid">
+                <span class="advertencia">Todos los campos son obligatorios</span>
+            </div>
+            <div class="inputs">
+                <input type="text" required formControlName="fecha">
+                <label for="name"> Fecha: 2013 - 2014</label>
+            </div>
+            <div class="inputs">
+                <input type="text" required formControlName="titulo">
+                <label for="name"> Título</label>
+            </div>
+            <div class="inputs">
+                <input type="text" required formControlName="descripcion">
+                <label for="name"> Descripción</label>
+            </div>
+            <div class="boton">
+                <button  type="submit">{{boton}} <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
