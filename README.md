@@ -4,7 +4,7 @@ Portfolio for Argentina Programa course
 
 ##
 
-HTML, CSS, TypeScript, JavaScript.
+HTML, CSS, TypeScript.
 Framework: Angular.
 DB (NoSql): Firebase.
 Project deploy: https://argentinaprograma-3231d.web.app/#/portfolio
