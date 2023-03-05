@@ -1,24 +1,15 @@
 # ArgentinaPrograma
 
-Portfolio web para Argentina Programa.
-
-## Tecnologías aplicadas
-
-HTML, CSS, TypeScript, JavaScript.
-Framework: Angular.
-Base de datos (NoSql): Firebase.
-Link deploy del proyecto: https://argentinaprograma-3231d.web.app/#/portfolio
+Portfolio for Argentina Programa course
 
 ##
 
-Realicé la base de datos, autenticación (login) y protección de rutas con Firebase. Las peticiones a la base de datos en firebase se encuentran en los servicios (CRUD, Auth, AuthGuard). Es decir hay que loguearse, si es correcto el email, se puede acceder a la edición del portfolio. Se puede agregar habilidades, algo que pude lograr es permitir subir imágenes a la base de datos (formato64) para mostrarlas y poder ponerle un "icono" a las habilidades. También borrar y editar.
-Hice lo que mas pude para que sea responsive. Quizás hay varios detalles pero quedó legible, por lo menos visto desde mi celular, notebook (aportada por el programa) y pc.
-También el formulario de contacto funciona y pueden enviarme mails.(emailjs)
+HTML, CSS, TypeScript, JavaScript.
+Framework: Angular.
+DB (NoSql): Firebase.
+Project deploy: https://argentinaprograma-3231d.web.app/#/portfolio
 
-## Personal
+##
 
-No utilicé MySql. Tampoco bootstrap.
-Decidí no utilizar bootstrap porque queria aprender mas sobre CSS. Considero que me fue mas beneficioso pero hay algunos problemas que bootstrap si me hubiese podido solucionar como el de los modales. Si bien pude lograrlo con CSS despues tenia unos problemas con los componentes y decidí hacer el ruteo y listo (por ejemplo cuando se agregan/editan nuevas habilidades, experiencias, proyectos).
-Encontré muchos errores trabajando con MySql, si bien le di unos intentos no pude continuar y decidí pasarme a Firebase (NoSql).
+I developed a web application that utilizes Firebase for database management, authentication, and route protection. The Firebase requests are handled through services (CRUD, Auth, AuthGuard). Users must first log in with a correct email address to access the portfolio editing feature. Users can add skills and upload images to the database in base64 format to be displayed as an icon for each skill. The application also supports skill deletion and editing, and I made every effort to ensure the design is responsive across various devices. The contact form is also functional and users can send emails using emailjs.
 
-El proyecto resultó ser bastante frustrante porque no tenia conocimientos previos en programación, pero pude sobrellevar la frustración y lograr un buen resultado. Aún no estoy conforme porque sé que hay varias cosas que cambiar, mucho código repetido y componentes que quizás podrían ser solo uno. Tambíen los servicios, siento que los aproveché pero no del todo. Igualmente es increíble la cantidad de cosas que aprendí.
